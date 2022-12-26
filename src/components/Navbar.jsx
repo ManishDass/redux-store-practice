@@ -15,7 +15,10 @@ function Navbar() {
         <NavLink to='/products'>Products</NavLink>
         <NavLink to='/cart'>Cart</NavLink>
         <span className='cartCounter'>
-            Cart Items : {cartSelector.length}
+          {
+            cartSelector.length == 0 ? '' : 'Cart : ' + cartSelector.length
+          }
+            
         </span>
     </nav>
   )

@@ -42,3 +42,21 @@
 /* .App {
   width: 100vw;
 } */
+
+#signature {
+  stroke-dasharray: 2333.640380859375;
+  stroke-dashoffset: 2333.640380859375;
+  animation: sign 10s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sign {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
+
+.signature-pos {
+  margin-left: -200px;
+  margin-right: -200px;
+}
