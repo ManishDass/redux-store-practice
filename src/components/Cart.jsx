@@ -1,6 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { remove } from '../store/cartSlice'
 import { NavLink } from 'react-router-dom'
@@ -21,13 +19,13 @@ const Cart = () => {
                         <h4>{product.title}</h4>
                         <p>Rating: {product.rating.rate} ({product.rating.count})</p>
                         <h5>{product.price}$</h5>
-                        <button className='btn' onClick={()=>dispatch(remove(product.id))}  >Remove from cart</button>
+                        <button className='btn' onClick={()=>dispatch(remove(product.id))}> Remove from cart </button>
                     </div>
                 ))
             }
             </div>
 
-      : <h1 className='dark' > Cart is empty </h1>
+      : <h2 className='dark' style={{marginBottom: '100px', marginTop: '100px'}} > Cart is empty </h2>
      
       } </div>
 
